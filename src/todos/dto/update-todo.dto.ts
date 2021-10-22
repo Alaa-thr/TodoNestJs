@@ -1,14 +1,14 @@
-;import { IsNotEmpty, IsOptional, IsString, Matches } from "class-validator";
+import { IsOptional, IsString, Matches } from "class-validator";
 import { TodoStatusEnum } from "src/enums/todo-status.enum";
 
-export class CreateTodoDto {
+export class UpdateTodoDto {
 
-    @IsNotEmpty()
+    @IsOptional()
     @IsString()
     @Matches(/^(\w+ ?)*$/)
     title: string;
 
-    @IsNotEmpty()
+    @IsOptional()
     @IsString()
     @Matches(/^(\w+ ?)*$/)
     description: string;
